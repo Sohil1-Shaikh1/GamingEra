@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+span{
+    color: rgb(245, 34, 34);
+}
+.up_sec{
+    height: 100vh;
+    width: 100%;
+    background-image:url("images/spidy.jpg");
+    background-size: cover;
+    background-position: center;
+    animation-name: anim;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes anim{
+    0%{background-image:url("images/uncharted.jpeg");}
+    15%{background-image:url("images/valorant.jpeg");}
+    35%{background-image:url("images/spiderman.jpeg");}
+    55%{background-image:url("images/bgmi.jpeg");}
+    65%{background-image:url("images/god\ of\ war.jpeg");}
+    90%{background-image:url("images/creed.jpeg");}
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 50px;
+}
+.logo{
+    color: white;
+    font-size: 30px;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px  20px;
+    
+}
+nav ul li a{
+    color: white;
+    text-decoration: purple;
+    font-weight: bold;
+    font-size: 17px;
+}
+nav ul li a:hover{
+    color: gold;
+    transition: .3s;
+    
+}
+/* li a ::before{
+    content: "";
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    opacity: 100%;
+
+} */
+
+.mid_sec{
+    padding-top: 30px;
+}
+
+/* cards section */
+.Card{
+    width: 320px;
+    height: 500px;
+    border-radius: 29px;
+    overflow: hidden;
+    border: 8px solid rgba(132, 0, 255, 0.623);
+    position: relative;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.card-body{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #a137b638;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+.Card:hover .card-body{
+    right: 0;
+}
+
+.card-title{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+    padding-bottom: 29px;
+}
+.card-info{
+    font-size: 19px;
+    line-height: 25px;
+    margin: 40px 10px;
+    font-weight: 400;
+}
+.card-btn{
+    color: white;
+    background: blueviolet;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.more-cards{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+footer{
+    margin-top: 30px;
+    background-color: rgb(181, 70, 214);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+/* .info-sec .Card{
+    margin-top: 15px;
+    margin-left: -10px;
+    border-radius: 20px;
+    width: 600px;
+    height: 400px;
+    border: 4px dashed darkblue;
+    
+    background-position: center;
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.info-sec .card-body{
+    background: #2e4bc9b9;
+} */
+.info-sec .card-btn{
+    background: rgb(84, 84, 245);
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(132, 0, 255, 0.623);
+}
+
+
+
+.Social-links{
+    
+    width: 750px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-right: -30px;
+}
+i{
+    justify-content: center;
+    display: list-item;
+    font-size: 50px;
+    margin-left: 40px;
+    margin-top: 40px;
+   cursor: pointer;
+    
+}
+.info-sec{
+    margin-top: 20px;
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    padding: 30px 50px;
+    background: #fff;
+    cursor: pointer;
+   
+}
+.info-sec:hover{
+    height: 360px;
+}
+
+.imgbox{
+    margin-top: -15px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-0px);
+    z-index: 99;
+}
+img{
+    
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);        
+}
+.content{
+    margin-top: 100px;
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-450px);
+    opacity: 0;
+    transition: 0.3s;
+}
+.info-sec:hover > .content{
+    opacity: 1;
+    transform: translateY(-200px);
+}
+.content p li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(38, 38, 218);
+}
